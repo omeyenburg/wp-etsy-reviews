@@ -6,7 +6,7 @@
  * Version: 1.0.0
  * Author: omeyenburg
  * Author URI: https://github.com/omeyenburg
- * License: GPL v2 or later
+ * License: GPL-2.0-or-later
  * Text Domain: wp-etsy-reviews
  */
 

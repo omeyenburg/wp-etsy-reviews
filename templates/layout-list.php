@@ -1,4 +1,9 @@
 <?php
+/**
+ * Copyright (C) 2026 omeyenburg
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
 if (!defined('ABSPATH')) {
     exit;
 }
