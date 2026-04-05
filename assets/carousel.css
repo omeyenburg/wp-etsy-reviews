@@ -1,0 +1,449 @@
+.etsy-reviews-carousel {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    color: #000000;
+    overflow: visible;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.etsy-reviews-carousel *,
+.etsy-reviews-carousel *::before,
+.etsy-reviews-carousel *::after {
+    box-sizing: border-box;
+}
+
+/* Carousel Container */
+.etsy-carousel-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+@media (max-width: 1023px) {
+    .etsy-carousel-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Header Section */
+.etsy-carousel-header {
+    flex: 0 0 245px;
+    max-width: 245px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 44px;
+}
+
+@media (max-width: 1023px) {
+    .etsy-carousel-header {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+}
+
+.etsy-header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.etsy-rating-badge {
+    margin-bottom: 0;
+}
+
+.etsy-rating-text {
+    font-size: 16px !important;
+    font-weight: 600;
+    letter-spacing: 0;
+    color: #000000;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.etsy-stars-large {
+    display: flex;
+    gap: 0;
+    margin-bottom: 3px;
+    line-height: 0;
+}
+
+.etsy-stars-large .etsy-star {
+    width: 30px !important;
+    height: 30px !important;
+    display: inline-block;
+}
+
+.etsy-review-count {
+    font-size: 14px !important;
+    color: #000000;
+    line-height: 1.45em;
+    margin-bottom: 0;
+    margin-top: 8px;
+}
+
+.etsy-review-count strong {
+    font-weight: 600;
+}
+
+.etsy-logo {
+    margin-top: 8px;
+}
+
+.etsy-logo a {
+    display: block;
+    text-decoration: none;
+    opacity: 0.9;
+    transition: opacity 200ms ease;
+}
+
+.etsy-logo a:hover {
+    opacity: 1;
+}
+
+/* Reviews Section */
+.etsy-carousel-reviews {
+    flex: 0 0 calc(100% - 285px);
+    max-width: calc(100% - 285px);
+    position: relative;
+    min-width: 0;
+}
+
+.etsy-carousel-track-wrapper {
+    overflow: hidden;
+    margin: 0 -8px;
+    padding-bottom: 1px;
+}
+
+.etsy-carousel-track {
+    display: flex;
+    transition: transform 300ms ease-out;
+    padding: 5px 0;
+    align-items: stretch;
+    height: 550px;
+}
+
+/* Review Cards */
+.etsy-review-card {
+    flex: 0 0 100%;
+    padding: 0 8px;
+    max-width: 100%;
+    display: flex;
+    height: 100%;
+}
+
+/* Mobile: 1 card */
+@media (max-width: 767px) {
+    .etsy-review-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Tablet/Medium: 2 cards */
+@media (min-width: 768px) and (max-width: 1300px) {
+    .etsy-review-card {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+/* Desktop: 3 cards */
+@media (min-width: 1301px) {
+    .etsy-review-card {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+}
+
+.etsy-review-inner {
+    background: #f4f4f4;
+    border-radius: 15px;
+    padding: 20px;
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+    transition: transform 300ms ease-out;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.etsy-review-text {
+    font-size: 15px;
+    line-height: 21.75px;
+    color: #000000;
+    text-align: left;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    flex-shrink: 0;
+}
+
+.etsy-review-image {
+    width: 100%;
+    margin: 0px auto 0px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    flex: 1;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+}
+
+.etsy-review-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 12px;
+}
+
+@media (min-width: 480px) {
+    .etsy-review-card:hover .etsy-review-inner {
+        transform: translateY(-5px);
+    }
+}
+
+/* Review Header */
+.etsy-review-header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.etsy-platform-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 24px;
+    height: 24px;
+}
+
+.etsy-platform-badge a {
+    display: block;
+    opacity: 0.8;
+    transition: opacity 200ms ease;
+}
+
+.etsy-platform-badge a:hover {
+    opacity: 1;
+}
+
+.etsy-reviewer-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.etsy-reviewer-avatar img {
+    width: 40px !important;
+    height: 40px !important;
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.etsy-reviewer-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.etsy-reviewer-name {
+    font-weight: 600;
+    font-size: 15px;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 25px;
+}
+
+.etsy-review-date {
+    font-size: 13px;
+    color: #767676;
+    margin-top: 0;
+}
+
+/* Stars */
+.etsy-review-stars {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-top: 11px;
+    margin-bottom: 11px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.etsy-review-stars .etsy-star {
+    width: 17px !important;
+    height: 17px !important;
+    display: inline-block;
+    margin-right: 1px !important;
+    vertical-align: unset;
+}
+
+/* Review Text */
+.etsy-review-text {
+    font-size: 15px;
+    line-height: 21.75px;
+    color: #000000;
+    text-align: left;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Controls */
+.etsy-carousel-controls {
+    display: block;
+    width: 100%;
+    position: absolute;
+    height: 0px;
+    z-index: 1;
+    top: 50%;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+}
+
+.etsy-control-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: #F4F4F4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: all 200ms ease-out;
+    pointer-events: all;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+}
+
+.etsy-control-btn:hover {
+    cursor: pointer;
+    background-color: #4d4d4d !important;
+    outline-color: #424242 !important;
+    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.05);
+}
+
+.etsy-control-btn .etsy-arrow {
+    width: 10px;
+    height: 10px;
+    border-style: solid;
+    border-width: 0 0 2px 2px;
+    border-color: #575757;
+    transition: border-color 200ms ease-out;
+    display: block;
+}
+
+.etsy-control-btn:hover .etsy-arrow {
+    border-color: #fff !important;
+}
+
+.etsy-control-btn.etsy-prev {
+    left: -15px;
+}
+
+.etsy-control-btn.etsy-prev .etsy-arrow {
+    transform: rotate(45deg);
+}
+
+.etsy-control-btn.etsy-next {
+    right: -15px;
+}
+
+.etsy-control-btn.etsy-next .etsy-arrow {
+    transform: rotate(-135deg);
+}
+
+@media (max-width: 767px) {
+    .etsy-carousel-reviews {
+        position: relative;
+    }
+
+    .etsy-carousel-controls {
+        position: absolute;
+        height: 0;
+        display: block;
+        top: 50%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .etsy-control-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: all;
+    }
+
+    .etsy-control-btn.etsy-prev {
+        left: -15px;
+    }
+
+    .etsy-control-btn.etsy-next {
+        right: -15px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .etsy-carousel-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .etsy-carousel-header {
+        flex: none;
+        max-width: 100%;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .etsy-carousel-reviews {
+        flex: none;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 479px) {
+    .etsy-carousel-controls {
+        top: calc(50% - 19px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .etsy-carousel-track,
+    .etsy-review-inner,
+    .etsy-control-btn,
+    .etsy-dot {
+        transition: none !important;
+    }
+}
